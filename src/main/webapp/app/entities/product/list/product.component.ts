@@ -21,6 +21,7 @@ import { ProductDeleteDialogComponent } from '../delete/product-delete-dialog.co
   standalone: true,
   selector: 'jhi-product',
   templateUrl: './product.component.html',
+  styleUrls: ['./product.component.css'],
   imports: [
     RouterModule,
     FormsModule,

@@ -1,6 +1,12 @@
 <div class="container mt-4">
   <h2 id="page-heading" data-cy="ProductHeading">
-    <span jhiTranslate="storeApp.product.home.title">Products</span>
+    <span class="titulo">Products</span>
+
+    <div class="search">
+      <i class="fa fa-search"></i>
+      <input type="text" class="form-control" placeholder="Search your item ..." />
+      <button class="btn btn-primary">Search</button>
+    </div>
     <div class="d-flex justify-content-end">
       <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
         <fa-icon icon="sync" [spin]="isLoading"></fa-icon>

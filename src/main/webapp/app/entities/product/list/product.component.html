@@ -1,0 +1,81 @@
+<div class="container mt-4">
+  <h2 id="page-heading" data-cy="ProductHeading">
+    <span jhiTranslate="storeApp.product.home.title">Products</span>
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="storeApp.product.home.refreshListLabel">Refresh list</span>
+      </button>
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-product"
+        [routerLink]="['/product/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="storeApp.product.home.createLabel">Criar novo(a) Product</span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+  <jhi-alert></jhi-alert>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="products?.length === 0">
+    <span jhiTranslate="storeApp.product.home.notFound">Nenhum Products encontrado</span>
+  </div>
+
+  <div class="row" *ngIf="products && products.length > 0">
+    <div *ngFor="let product of products" class="col-lg-4 col-md-6 mb-4">
+      <div class="card">
+        <img [src]="'data:' + product.imageContentType + ';base64,' + product.image" class="card-img-top" alt="Product Image" />
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p class="card-text">
+            <strong>{{ 'storeApp.product.description' | translate }}:</strong> {{ product.description }}
+          </p>
+          <p class="card-text">
+            <strong>{{ 'storeApp.product.price' | translate }}:</strong> {{ product.price }}
+          </p>
+          <p class="card-text">
+            <strong>{{ 'storeApp.product.productSize' | translate }}:</strong> {{ 'storeApp.Size.' + product.productSize | translate }}
+          </p>
+          <p class="card-text" *ngIf="product?.productCategory">
+            <strong>{{ 'storeApp.product.productCategory' | translate }}:</strong> {{ product.productCategory }}
+          </p>
+          <div class="text-end">
+            <a [routerLink]="['/product', product.id, 'view']" class="btn btn-info btn-sm" data-cy="entityDetailsButton">
+              <fa-icon icon="eye"></fa-icon>
+              <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Visualizar</span>
+            </a>
+            <a [routerLink]="['/product', product.id, 'edit']" class="btn btn-primary btn-sm" data-cy="entityEditButton">
+              <fa-icon icon="pencil-alt"></fa-icon>
+              <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Editar</span>
+            </a>
+            <button (click)="delete(product)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+              <fa-icon icon="times"></fa-icon>
+              <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Eliminar</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="products && products.length > 0">
+    <div class="d-flex justify-content-center">
+      <jhi-item-count [params]="{ page: page, totalItems: totalItems, itemsPerPage: itemsPerPage }"></jhi-item-count>
+    </div>
+    <div class="d-flex justify-content-center">
+      <ngb-pagination
+        [collectionSize]="totalItems"
+        [page]="page"
+        [pageSize]="itemsPerPage"
+        [maxSize]="5"
+        [rotate]="true"
+        [boundaryLinks]="true"
+        (pageChange)="navigateToPage($event)"
+      ></ngb-pagination>
+    </div>
+  </div>
+</div>

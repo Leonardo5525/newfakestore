@@ -1,0 +1,31 @@
+{
+  "storeApp": {
+    "customerDetails": {
+      "home": {
+        "title": "Customer Details",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Criar novo(a) Customer Details",
+        "createOrEditLabel": "Criar ou editar Customer Details",
+        "notFound": "Nenhum Customer Details encontrado"
+      },
+      "created": "Um novo Customer Details foi criado com o identificador {{ param }}",
+      "updated": "Customer Details com identificador {{ param }} foi actualizado",
+      "deleted": "Customer Details com identificador {{ param }} foi eliminado",
+      "delete": {
+        "question": "Tem a certeza que pretende eliminar o(a) Customer Details {{ id }}?"
+      },
+      "detail": {
+        "title": "Customer Details"
+      },
+      "id": "ID",
+      "gender": "Gender",
+      "phone": "Phone",
+      "addressLine1": "Address Line 1",
+      "addressLine2": "Address Line 2",
+      "city": "City",
+      "country": "Country",
+      "user": "User",
+      "cart": "Cart"
+    }
+  }
+}

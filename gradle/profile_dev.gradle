@@ -1,7 +1,7 @@
 sourceSets {
     test {
         java {
-            exclude 'br/com/ciag/newfakestore//config/MysqlTestContainer.java'
+            exclude 'com/jhipster/demo/store//config/MysqlTestContainer.java'
         }
     }
 }

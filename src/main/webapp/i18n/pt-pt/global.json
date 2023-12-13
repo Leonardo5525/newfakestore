@@ -1,13 +1,18 @@
 {
   "global": {
-    "title": "Newfakestore",
+    "title": "Store",
     "browsehappy": "Está a usar um navegador <strong>desatualizado</strong>. Por favor <a href=\"http://browsehappy.com/?locale=pt_PT\">atualize o seu navegador</a> para ter uma experiência melhor.",
     "menu": {
       "home": "Início",
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entidades",
-        "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
+        "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)",
+        "product": "Product",
+        "productCategory": "Product Category",
+        "customerDetails": "Customer Details",
+        "shoppingCart": "Shopping Cart",
+        "productOrder": "Product Order"
       },
       "account": {
         "main": "Conta",

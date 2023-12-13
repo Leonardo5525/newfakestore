@@ -1,0 +1,30 @@
+{
+  "storeApp": {
+    "shoppingCart": {
+      "home": {
+        "title": "Shopping Carts",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Criar novo(a) Shopping Cart",
+        "createOrEditLabel": "Criar ou editar Shopping Cart",
+        "notFound": "Nenhum Shopping Carts encontrado"
+      },
+      "created": "Um novo Shopping Cart foi criado com o identificador {{ param }}",
+      "updated": "Shopping Cart com identificador {{ param }} foi actualizado",
+      "deleted": "Shopping Cart com identificador {{ param }} foi eliminado",
+      "delete": {
+        "question": "Tem a certeza que pretende eliminar o(a) Shopping Cart {{ id }}?"
+      },
+      "detail": {
+        "title": "Shopping Cart"
+      },
+      "id": "ID",
+      "placedDate": "Placed Date",
+      "status": "Status",
+      "totalPrice": "Total Price",
+      "paymentMethod": "Payment Method",
+      "paymentReference": "Payment Reference",
+      "order": "Order",
+      "customerDetails": "Customer Details"
+    }
+  }
+}

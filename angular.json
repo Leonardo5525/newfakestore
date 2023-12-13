@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "newfakestore": {
+    "store": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -77,15 +77,15 @@
         "serve": {
           "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
-            "browserTarget": "newfakestore:build:development",
+            "browserTarget": "store:build:development",
             "port": 4200
           },
           "configurations": {
             "production": {
-              "browserTarget": "newfakestore:build:production"
+              "browserTarget": "store:build:production"
             },
             "development": {
-              "browserTarget": "newfakestore:build:development"
+              "browserTarget": "store:build:development"
             }
           },
           "defaultConfiguration": "development"

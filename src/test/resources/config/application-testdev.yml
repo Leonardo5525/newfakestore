@@ -11,8 +11,8 @@
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:h2:mem:newfakestore:12344;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=MYSQL
-    username: newfakestore
+    url: jdbc:h2:mem:store:12344;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=MYSQL
+    username: store
     password:
     hikari:
       auto-commit: false
